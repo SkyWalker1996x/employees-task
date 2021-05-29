@@ -1,10 +1,20 @@
 import React from 'react';
+import { Route, Switch, Redirect } from 'react-router-dom';
+// pages
+import { Employees } from 'pages/Employees';
+import { NotFoundPage } from 'pages/NotFoundPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Start Employees Task</h1>
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <Redirect to="/employees" />
+      </Route>
+
+      <Route exact path="/employees" component={Employees} />
+
+      <Route render={() => <NotFoundPage />} />
+    </Switch>
   );
 }
 
