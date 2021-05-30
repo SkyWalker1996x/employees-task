@@ -1,5 +1,4 @@
-import { EmployeesService } from '../../services/employees-service';
-import { ThunkAction, ThunkDispatch } from 'redux-thunk';
+import { EmployeesService } from 'services/employees-service';
 
 const { getEmployees } = new EmployeesService();
 
@@ -25,7 +24,6 @@ export const fetchEmployees = () => (dispatch: any) => {
       dispatch(fetchEmployeesSuccess(data));
     })
     .catch(err => {
-      console.log('err', err);
       dispatch(fetchEmployeesError(err));
     });
 };

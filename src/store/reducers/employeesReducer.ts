@@ -1,4 +1,6 @@
-const initialState = {
+import { EmployeesState } from 'interfaces/Employees';
+
+const initialState: EmployeesState = {
   loading: false,
   error: false,
   items: [],
