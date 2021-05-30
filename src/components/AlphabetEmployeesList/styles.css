@@ -45,6 +45,14 @@
   border-bottom: 2px solid #0075ff;
 }
 
+.employee__label {
+  font-weight: bold;
+}
+
+.active {
+  color: #0075ff;
+}
+
 .radio__group {
   display: flex;
   flex-direction: column;

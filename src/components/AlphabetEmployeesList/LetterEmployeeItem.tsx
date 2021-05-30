@@ -19,7 +19,9 @@ export const LetterEmployeeItem = ({ employee }: LetterEmployeeItemProps) => {
 
   return (
     <div className="employee__wrapper">
-      <p>{`${lastName} ${firstName}`}</p>
+      <p
+        className={selected ? `employee__label active` : 'employee__label'}
+      >{`${lastName} ${firstName}`}</p>
 
       <div className="radio__group">
         <div>
