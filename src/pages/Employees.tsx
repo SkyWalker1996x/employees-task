@@ -9,14 +9,14 @@ import MonthEmployeesList from 'components/MonthEmployeesList';
 import { EmployeesState } from 'interfaces/Employees';
 
 export const Employees = () => {
-  const employees = useSelector((state: EmployeesState) => state);
+  const { loading } = useSelector((state: EmployeesState) => state);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchEmployees());
   }, []);
 
-  if (employees.loading) {
+  if (loading) {
     return <h1>loading...</h1>;
   }
 
