@@ -1,8 +1,10 @@
 import React from 'react';
 // components
 import { LetterEmployeeItem } from './LetterEmployeeItem';
+//interfaces
+import { LetterItemProps } from 'interfaces/Props';
 
-export const LetterItem = ({ item }: any) => {
+export const LetterItem = ({ item }: LetterItemProps) => {
   const { letter, items } = item;
 
   return (

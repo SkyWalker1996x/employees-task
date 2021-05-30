@@ -1,9 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addSelectedItem, removeSelectedItem } from 'store/actions/employeesActions';
+// interfaces
 import { EmployeesState } from 'interfaces/Employees';
+import { LetterEmployeeItemProps } from 'interfaces/Props';
 
-export const LetterEmployeeItem = ({ employee }: any) => {
+export const LetterEmployeeItem = ({ employee }: LetterEmployeeItemProps) => {
   const { firstName, lastName } = employee;
   const { selectedItems } = useSelector((state: EmployeesState) => state);
   const selected = selectedItems.includes(employee);

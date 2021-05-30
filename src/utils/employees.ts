@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { Employees, TransformToAlphabetList } from 'interfaces/Employees';
+import { TransformToAlphabetList, TransformToMonthList } from 'interfaces/Employees';
 
 export const transformToAlphabetList: TransformToAlphabetList = (list, sortField) => {
   const alphabetArray = Array.from(Array(26)).map((item, idx) => idx + 65);
@@ -32,7 +32,7 @@ export const transformToAlphabetList: TransformToAlphabetList = (list, sortField
   return transformList;
 };
 
-export const transformToMonthList = (list: Employees, sortField: string) => {
+export const transformToMonthList: TransformToMonthList = (list, sortField) => {
   const monthsArray = Array.from({ length: 12 }, (e, i) => {
     // @ts-ignore
     return new Date(null, i + 1, null).toLocaleDateString('en', { month: 'long' });

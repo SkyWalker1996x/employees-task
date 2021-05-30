@@ -11,12 +11,25 @@ export interface EmployeesState {
   loading: boolean;
   error: boolean | string;
   items: Employees;
-  selectedItems: Employees
+  selectedItems: Employees;
 }
 
-export type AlphabetEmployeesList = Array<{ letter: string; items: Employees }>;
+export interface AlphabetListItem {
+  letter: string;
+  items: Employees;
+}
 
 export type TransformToAlphabetList = (
   list: Employees,
   sortField: string
-) => AlphabetEmployeesList;
+) => Array<AlphabetListItem>;
+
+export interface MonthListItem {
+  month: string;
+  items: Employees;
+}
+
+export type TransformToMonthList = (
+  list: Employees,
+  sortField: string
+) => Array<MonthListItem>;
