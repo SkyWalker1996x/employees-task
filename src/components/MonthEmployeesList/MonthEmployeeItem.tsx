@@ -8,8 +8,8 @@ export const MonthEmployeeItem = ({ item }: MonthEmployeeItemProps) => {
   const birthday = moment(dob).format('D MMMM YYYY');
 
   return (
-    <p>
+    <li>
       {lastName} {firstName} - {birthday} year
-    </p>
+    </li>
   );
 };

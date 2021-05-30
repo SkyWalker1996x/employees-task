@@ -10,9 +10,11 @@ export const MonthItem = ({ item }: MonthItemProps) => {
   return (
     <>
       <h2>{month}</h2>
-      {items.map((item: any) => {
-        return <MonthEmployeeItem item={item} />;
-      })}
+      <ul>
+        {items.map(item => {
+          return <MonthEmployeeItem key={item.id} item={item} />;
+        })}
+      </ul>
     </>
   );
 };

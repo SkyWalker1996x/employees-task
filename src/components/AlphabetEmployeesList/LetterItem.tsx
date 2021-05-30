@@ -13,7 +13,7 @@ export const LetterItem = ({ item }: LetterItemProps) => {
       <div className="employees__list">
         {items.length === 0
           ? '______'
-          : items.map((employee: any) => {
+          : items.map((employee) => {
               return <LetterEmployeeItem key={employee.id} employee={employee} />;
             })}
       </div>

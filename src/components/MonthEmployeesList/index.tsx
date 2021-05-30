@@ -6,13 +6,13 @@ import { MonthItem } from './MonthItem';
 import { EmployeesState } from 'interfaces/Employees';
 // utils
 import { transformToMonthList } from 'utils/employees';
+// styles
+import './styles.css';
 
 const MonthEmployeesList = () => {
   const { selectedItems } = useSelector((state: EmployeesState) => state);
 
   const monthEmployeesList = transformToMonthList(selectedItems, 'lastName');
-
-  console.log('monthEmployeesList', monthEmployeesList);
 
   const monthList = monthEmployeesList.map(month => {
     if (month.items.length > 0) {
