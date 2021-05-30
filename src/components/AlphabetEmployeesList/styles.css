@@ -1,0 +1,37 @@
+.letter__list {
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  column-gap: 50px;
+}
+
+.letter__wrapper {
+  width: auto;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.employees__list {
+  width: 250px;
+  height: 350px;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.employee__wrapper {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #0075ff;
+}
+
+.radio__group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
