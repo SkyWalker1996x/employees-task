@@ -11,8 +11,10 @@ export const transformToAlphabetList: TransformToAlphabetList = (list, sortField
       return letter.toUpperCase() === item[sortField][0].toUpperCase();
     });
 
-    const sortItems = filterItems.sort((a: any, b: any) => {
+    const sortItems = filterItems.sort((a, b) => {
+      // @ts-ignore
       const sortFieldA = a[sortField];
+      // @ts-ignore
       const sortFieldB = b[sortField];
 
       if (sortFieldA < sortFieldB) return -1;

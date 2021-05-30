@@ -11,6 +11,7 @@ export interface EmployeesState {
   loading: boolean;
   error: boolean | string;
   items: Employees;
+  selectedItems: Employees
 }
 
 export type AlphabetEmployeesList = Array<{ letter: string; items: Employees }>;

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // store
 import { fetchEmployees } from 'store/actions/employeesActions';
-// utils
-import { transformToAlphabetList } from 'utils/employees';
+// components
+import AlphabetEmployeesList from 'components/AlphabetEmployeesList';
 // interfaces
 import { EmployeesState } from 'interfaces/Employees';
 
@@ -19,7 +19,9 @@ export const Employees = () => {
     return <h1>loading...</h1>;
   }
 
-  const alphabetEmployeesList = transformToAlphabetList(employees.items, 'lastName');
-
-  return <h1>Start Employees Task</h1>;
+  return (
+    <>
+      <AlphabetEmployeesList />
+    </>
+  );
 };
