@@ -1,3 +1,5 @@
 export const FETCH_LOAD = 'FETCH_LOAD';
 export const FETCH_SUCCESS = 'FETCH_SUCCESS';
 export const FETCH_ERROR = 'FETCH_LOAD';
+export const ADD_SELECTED_ITEM = 'ADD_SELECTED_ITEM';
+export const REMOVE_SELECTED_ITEM = 'REMOVE_SELECTED_ITEM';
