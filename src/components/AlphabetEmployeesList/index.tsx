@@ -1,18 +1,18 @@
-import React  from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 // components
-import { LetterEmployeesList } from './LetterEmployeesList';
+import { LetterItem } from './LetterItem';
 // utils
 import { transformToAlphabetList } from 'utils/employees';
 // interfaces
 import { EmployeesState } from 'interfaces/Employees';
 // styles
-import './styles.css'
+import './styles.css';
 
 const AlphabetEmployeesList = () => {
-  const employees = useSelector((state: EmployeesState) => state);
+  const { items } = useSelector((state: EmployeesState) => state);
 
-  const alphabetEmployeesList = transformToAlphabetList(employees.items, 'lastName');
+  const alphabetEmployeesList = transformToAlphabetList(items, 'lastName');
 
   return (
     <div className="letters__wrapper">
@@ -20,7 +20,7 @@ const AlphabetEmployeesList = () => {
 
       <div className="letter__list">
         {alphabetEmployeesList.map((item, index) => {
-          return <LetterEmployeesList key={index} item={item} />;
+          return <LetterItem key={index} item={item} />;
         })}
       </div>
     </div>

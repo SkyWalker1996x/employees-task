@@ -2,7 +2,7 @@ import React from 'react';
 // components
 import { LetterEmployeeItem } from './LetterEmployeeItem';
 
-export const LetterEmployeesList = ({ item }: any) => {
+export const LetterItem = ({ item }: any) => {
   const { letter, items } = item;
 
   return (
