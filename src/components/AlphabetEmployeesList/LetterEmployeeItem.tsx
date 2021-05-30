@@ -8,7 +8,7 @@ import { LetterEmployeeItemProps } from 'interfaces/Props';
 export const LetterEmployeeItem = ({ employee }: LetterEmployeeItemProps) => {
   const { firstName, lastName } = employee;
   const { selectedItems } = useSelector((state: EmployeesState) => state);
-  const selected = selectedItems.includes(employee);
+  const selected = selectedItems.findIndex(item => item.id === employee.id) !== -1;
   const dispatch = useDispatch();
 
   const onChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
