@@ -1,9 +1,21 @@
 .birthday__wrapper {
-    width: 20%;
-    margin-left: 50px;
+  width: 20%;
+  margin-left: 50px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.birthday__wrapper h1 {
+  color: #0075ff;
+  margin-bottom: 20px;
 }
 
 .month__list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.month__list ul {
+  padding-inline-start: 20px;
 }
