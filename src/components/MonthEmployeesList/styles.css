@@ -1,0 +1,9 @@
+.birthday__wrapper {
+    width: 20%;
+    margin-left: 50px;
+}
+
+.month__list {
+    display: flex;
+    flex-direction: column;
+}

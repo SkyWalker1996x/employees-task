@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchEmployees } from 'store/actions/employeesActions';
 // components
 import AlphabetEmployeesList from 'components/AlphabetEmployeesList';
+import MonthEmployeesList from 'components/MonthEmployeesList';
 // interfaces
 import { EmployeesState } from 'interfaces/Employees';
 
@@ -20,8 +21,9 @@ export const Employees = () => {
   }
 
   return (
-    <>
+    <div className="employees__page">
       <AlphabetEmployeesList />
-    </>
+      <MonthEmployeesList />
+    </div>
   );
 };

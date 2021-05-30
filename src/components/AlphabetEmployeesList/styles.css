@@ -1,3 +1,11 @@
+.employees__page {
+  display: flex;
+}
+
+.letters__wrapper {
+  width: 70%;
+}
+
 .letter__list {
   margin: 0 auto;
   padding: 10px;

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React  from 'react';
+import { useSelector } from 'react-redux';
 // components
 import { LetterEmployeesList } from './LetterEmployeesList';
 // utils
@@ -15,7 +15,7 @@ const AlphabetEmployeesList = () => {
   const alphabetEmployeesList = transformToAlphabetList(employees.items, 'lastName');
 
   return (
-    <>
+    <div className="letters__wrapper">
       <h1>Employees</h1>
 
       <div className="letter__list">
@@ -23,7 +23,7 @@ const AlphabetEmployeesList = () => {
           return <LetterEmployeesList key={index} item={item} />;
         })}
       </div>
-    </>
+    </div>
   );
 };
 
